@@ -93,7 +93,7 @@ And here is the summary of the CRNN network:
     <img src="https://github.com/Venyus/OCR/assets/118938648/e8f33ee8-fe81-4904-8ae3-c34104bf1fb5">
 </p> 
   
-**
+**Code Files Association Guide**
 CAPSTONE
 |
 |--crnn_save_models
