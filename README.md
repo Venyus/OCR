@@ -97,7 +97,7 @@ And here is the summary of the CRNN network:
 CAPSTONE  
 |  
 |--crnn_save_models  
-|	  |  
+|&nbsp|  
 |	  |--CRNN-CAPSTONE_51_980.pth    # newest model  
 |  
 |--data_set  
