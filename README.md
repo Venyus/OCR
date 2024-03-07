@@ -59,6 +59,15 @@ Following the previous step, the image underwent grayscale processing, resulting
 In simple terms, we identify entire rows or columns with pixel values of 255 as split boundaries. Consequently, multiple lines of content are transformed into individual lines.  
 After splitting the multi-text-line image and text centering the input image, we retain only the regions containing texts. This results in a highly standardized set of objects for recognition.  
 
+**Recognition Model**  
+The combination of CRNN with CTC provides a powerful solution for text detection. Firstly, through end-to-end learning, the model can directly learn from images to character sequences without the need for manual feature design. Secondly, the bidirectional LSTM layers effectively capture the sequential information of characters, crucial for the accuracy of text detection. Simultaneously, the convolutional layers offer sensitivity to spatial features, while the LSTM layers model temporal dependencies, enabling the model to comprehend both local details and global context. The introduction of CTC loss enhances the flexibility of the network in handling text sequences of varying lengths, adapting to diverse text lengths. This combination also enables the network to effectively handle variable-length texts, showcasing excellence across various real-world scenarios.  
+Building on the considerations mentioned above, we have decided to construct a CRNN+CTC architecture for text detection of PDF. The following is the architecture diagram of our network.  
+<p align="center">
+    <img src="https://github.com/Venyus/OCR/assets/118938648/514976bb-ced5-4db7-9f24-c341fb9c0969">
+</p>  
+
+In summary, the CRNN model consists of a CNN for feature extraction and a BiLSTM for sequence modeling. The final output is a sequence of characters, with each character being associated with a specific time step.  
+
 
 
 
