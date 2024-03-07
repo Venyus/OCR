@@ -18,3 +18,4 @@ Here is the whole picture of the design of PDF Converter:
 **Specified Raw Data Generation**  
 The target of the PDF converter is printed text. In order to obtain a model that aligns more closely with the task objectives and achieves better performance, we exclusively generate training data instead of opting for publicly available data sources.
 To maximize our training data and the model's generalization ability in PDF context conversion, we have considered various potential variable factors when detecting the text, including:
+![image](https://github.com/Venyus/OCR/assets/118938648/5f51e89c-26fa-481f-9183-002bbead4c28)
