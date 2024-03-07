@@ -69,5 +69,30 @@ Building on the considerations mentioned above, we have decided to construct a C
 In summary, the CRNN model consists of a CNN for feature extraction and a BiLSTM for sequence modeling. The final output is a sequence of characters, with each character being associated with a specific time step.  
 
 
+**Selected Model and Its Performance**  
+Based on the mentioned framework for text detection, we fine-tuned a total of 11 models by adjusting training samples, text lengths, model hyperparameters, and other parameters. In the end, the selected model is as follows:  
+<p align="center">
+    <img src="https://github.com/Venyus/OCR/assets/118938648/d232a3e7-1383-4db3-bd12-d53806ee965b">
+</p>  
+
+And here is the summary of the CRNN network:  
+<p align="center">
+    <img src="https://github.com/Venyus/OCR/assets/118938648/9d5c0e78-10f0-44ce-8988-dbf3530a8e7a">
+</p>  
+
+**Results**
+<p align="center">
+    <img src="https://github.com/Venyus/OCR/assets/118938648/985bbca5-b2fb-4a64-a836-e48d74b2414b">
+</p> 
+
+<p align="center">
+    <img src="https://github.com/Venyus/OCR/assets/118938648/d684b0fe-c607-4fec-b5a3-057971bfe0d1">
+</p> 
+
+<p align="center">
+    <img src="https://github.com/Venyus/OCR/assets/118938648/e8f33ee8-fe81-4904-8ae3-c34104bf1fb5">
+</p> 
+
+
 
 
