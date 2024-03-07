@@ -1,0 +1,17 @@
+Training Log
+
+time: 2023-11-11 11:29:25:
+batch_size: 16
+learning_rate: 0.0003
+epoch: 60
+dataset: 40000 + 10000
+data source: Reuters News
+Num of Chars one Line: varied from 10 to 100
+Kinds of Font: 42
+Type of Background: 9
+With Dirty Texts: No
+
+Accuary Rate on Test Set: 98%
+
+
+
