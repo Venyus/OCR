@@ -13,7 +13,6 @@ After a study of relevant theoretical methods, the task of the PDF converter is 
 4. Recognition model. 
 Here is the whole picture of the design of PDF Converter:  
 ![image](https://github.com/Venyus/OCR/assets/118938648/d759b065-0e3d-4ef0-a4c2-c49f36529cc2)  
-  
 **Specified Raw Data Generation**  
 The target of the PDF converter is printed text. In order to obtain a model that aligns more closely with the task objectives and achieves better performance, I exclusively generate training data instead of opting for publicly available data sources.
 To maximize my training data and the model's generalization ability in PDF context conversion, I have considered various potential variable factors when detecting the text, including:  
@@ -22,10 +21,9 @@ To maximize my training data and the model's generalization ability in PDF conte
 2. Font size and Font Style: To further ensure the model's generalization ability and enhance sample diversity, font size and font format are also variable. The font size varies from 14 to 24 randomly within raw data samples, which aligns with the font sizes commonly found in the body text of PDF reports. Moreover, I collect 42 different font style and their transformers, such as Arial, Arial Bold, Arial Italic, Arial Light, Times New Roman, Times New Roman Bold, and so on.   
 3. Background color: The background color of the text area is also present in PDF reports, which is a necessary consideration for text detection. To further enhance the final performance of the model, I randomly selected background color of the texts for nine chosen light colors, as ‘White’, ‘Light Blue’, ‘Light Pink’, ‘Light Yellow’, ‘Light Green’, ‘Light Orange’, ‘Light Purple’, ‘Light Gray’ and ‘Light Brown’.  
 4. Num of Char: By examining the texts in each line of the PDF reports, the character count for each line in the generated raw data ranges from 10 to 100.  
-5. Other Notes: The position of the text within the image also significantly impacts the model's performance, but the solution to this issue will be reflected in image processing.  
+5. Other Notes: The position of the text within the image also significantly impacts the model's performance, but the solution to this issue will be reflected in image processing.
 
-
-**Implementation of Recognizer**
+**Implementation of Recognizer**  
 Locating the texts to be recognized in PDF reports is a crucial but challenging task. Firstly, PDF report styles vary significantly, and constructing a labeled, trainable PDF set is difficult. Additionally, not every section of text in a PDF report contains relevant and useful information, such as sidebar directories. These factors can potentially result in misalignment of text, sentences interleaving, and a reduction in the information quality of paragraphs during recognition.  
 Faced with the issues mentioned above, I decided to build up a visual user interface (UI) to facilitate manual recognition as much as possible, ensuring the quality of detecting results.  
 ![image](https://github.com/Venyus/OCR/assets/118938648/051ce0b6-e12b-4148-b28c-14fa322282d9)  
