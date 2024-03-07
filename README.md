@@ -15,7 +15,7 @@ Here is the whole picture of the design of PDF Converter:
 <p align="center">
     <img src="https://github.com/Venyus/OCR/assets/118938648/d759b065-0e3d-4ef0-a4c2-c49f36529cc2">
 </p>
-
+  
 **Specified Raw Data Generation**  
 The target of the PDF converter is printed text. In order to obtain a model that aligns more closely with the task objectives and achieves better performance, I exclusively generate training data instead of opting for publicly available data sources.
 To maximize my training data and the model's generalization ability in PDF context conversion, I have considered various potential variable factors when detecting the text, including:  
@@ -79,8 +79,8 @@ And here is the summary of the CRNN network:
 <p align="center">
     <img src="https://github.com/Venyus/OCR/assets/118938648/9d5c0e78-10f0-44ce-8988-dbf3530a8e7a">
 </p>  
-
-**Results**
+  
+**Results**  
 <p align="center">
     <img src="https://github.com/Venyus/OCR/assets/118938648/985bbca5-b2fb-4a64-a836-e48d74b2414b">
 </p> 
