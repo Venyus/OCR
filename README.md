@@ -11,10 +11,10 @@ After a study of relevant theoretical methods, the task of the PDF converter is 
 2. Implementation of a filtering and recognition mechanism for PDFs.   
 3. Image grayscale processing.  
 4. Recognition model. 
-Here is the whole picture of the design of PDF Converter:  
+Here is the whole picture of the design of PDF Converter:    
 <div style="text-align:center">
-    <img src="https://github.com/Venyus/OCR/assets/118938648/d759b065-0e3d-4ef0-a4c2-c49f36529cc2" alt="图片描述">
-</div>
+    <img src="https://github.com/Venyus/OCR/assets/118938648/d759b065-0e3d-4ef0-a4c2-c49f36529cc2">
+</div>  
 
 **Specified Raw Data Generation**  
 The target of the PDF converter is printed text. In order to obtain a model that aligns more closely with the task objectives and achieves better performance, I exclusively generate training data instead of opting for publicly available data sources.
