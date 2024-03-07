@@ -1,0 +1,6 @@
+parameters	2023-11-11 22:36:32: 
+batch_size: 8
+learning_rate: 0.0003
+epoch: 60
+dataset: 400 + 100
+
