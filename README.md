@@ -13,12 +13,12 @@ After a study of relevant theoretical methods, the task of the PDF converter is 
 4.Recognition model. 
 Here is the whole picture of the design of PDF Converter: 
 
-![image](https://github.com/Venyus/OCR/assets/118938648/d759b065-0e3d-4ef0-a4c2-c49f36529cc2)
+![image](https://github.com/Venyus/OCR/assets/118938648/d759b065-0e3d-4ef0-a4c2-c49f36529cc2)  
 
 **Specified Raw Data Generation**  
 The target of the PDF converter is printed text. In order to obtain a model that aligns more closely with the task objectives and achieves better performance, we exclusively generate training data instead of opting for publicly available data sources.
 To maximize our training data and the model's generalization ability in PDF context conversion, we have considered various potential variable factors when detecting the text, including:  
-![image](https://github.com/Venyus/OCR/assets/118938648/5f51e89c-26fa-481f-9183-002bbead4c28)
+![image](https://github.com/Venyus/OCR/assets/118938648/5f51e89c-26fa-481f-9183-002bbead4c28)  
 1.Text Content: In fact, the object we aim to detect is the English text of annual reports. The units composing the data should include various possible punctuation marks and English letters. However, after multiple attempts, generating raw data by randomly organizing the units might lead to an excessively large training loss, consequently causing gradient vanishing when training the model. Therefore, for the text content, we ultimately adopted text from Reuters' publicly available news database.  
 2.Font size and Font Style: To further ensure the model's generalization ability and enhance sample diversity, font size and font format are also variable. The font size varies from 14 to 24 randomly within raw data samples, which aligns with the font sizes commonly found in the body text of PDF reports. Moreover, we collect 42 different font style and their transformers, such as Arial, Arial Bold, Arial Italic, Arial Light, Times New Roman, Times New Roman Bold, and so on.  
 3.Background color: The background color of the text area is also present in PDF reports, which is a necessary consideration for text detection. To further enhance the final performance of the model, we randomly selected background color of the texts for nine chosen light colors, as ‘White’, ‘Light Blue’, ‘Light Pink’, ‘Light Yellow’, ‘Light Green’, ‘Light Orange’, ‘Light Purple’, ‘Light Gray’ and ‘Light Brown’.  
