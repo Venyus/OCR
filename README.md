@@ -97,19 +97,19 @@ And here is the summary of the CRNN network:
 CAPSTONE  
 |  
 |--crnn_save_models  
-|&nbsp|  
-|	  |--CRNN-CAPSTONE_51_980.pth    # newest model  
+|||||  
+|||||--CRNN-CAPSTONE_51_980.pth    # newest model  
 |  
 |--data_set  
-|	  |  
-|	  |--images  # used to save the self-generated data  
-|  	|	  
-|	  |--labesl  # the corresponding label of each image in 'images' folder  
-|  	|   
-|	  |--test_images  # some samples for checking my codes  
-|  	|  
-|  	|--test.txt  # used to record the image path to its label of test data set  
-|  	|  
+|||||  
+|||||--images  # used to save the self-generated data  
+|||||	  
+|||||--labesl  # the corresponding label of each image in 'images' folder  
+|||||   
+|||||--test_images  # some samples for checking my codes  
+|||||  
+|||||--test.txt  # used to record the image path to its label of test data set  
+|||||  
 |	  |--train.txt  # used to record the image path to its label of train data set  
 |  	|  
 |	  |--train_test_data.py  #  used to spilt the data into train set(80%) and test set(20%), to generate the test.txt and train.txt  
