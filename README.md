@@ -13,13 +13,16 @@ After a study of relevant theoretical methods, the task of the PDF converter is 
 4. Recognition model. 
 Here is the whole picture of the design of PDF Converter:    
 <p align="center">
-    <img src="https://github.com/Venyus/OCR/assets/118938648/d759b065-0e3d-4ef0-a4c2-c49f36529cc2" alt="图片描述">
+    <img src="https://github.com/Venyus/OCR/assets/118938648/d759b065-0e3d-4ef0-a4c2-c49f36529cc2">
 </p>
 
 **Specified Raw Data Generation**  
 The target of the PDF converter is printed text. In order to obtain a model that aligns more closely with the task objectives and achieves better performance, I exclusively generate training data instead of opting for publicly available data sources.
 To maximize my training data and the model's generalization ability in PDF context conversion, I have considered various potential variable factors when detecting the text, including:  
-![image](https://github.com/Venyus/OCR/assets/118938648/5f51e89c-26fa-481f-9183-002bbead4c28)  
+<p align="center">
+    <img src="https://github.com/Venyus/OCR/assets/118938648/5f51e89c-26fa-481f-9183-002bbead4c28">
+</p>
+
 1. Text Content: In fact, the object we aim to detect is the English text of annual reports. The units composing the data should include various possible punctuation marks and English letters. However, after multiple attempts, generating raw data by randomly organizing the units might lead to an excessively large training loss, consequently causing gradient vanishing when training the model. Therefore, for the text content, I ultimately adopted text from Reuters' publicly available news database.  
 2. Font size and Font Style: To further ensure the model's generalization ability and enhance sample diversity, font size and font format are also variable. The font size varies from 14 to 24 randomly within raw data samples, which aligns with the font sizes commonly found in the body text of PDF reports. Moreover, I collect 42 different font style and their transformers, such as Arial, Arial Bold, Arial Italic, Arial Light, Times New Roman, Times New Roman Bold, and so on.   
 3. Background color: The background color of the text area is also present in PDF reports, which is a necessary consideration for text detection. To further enhance the final performance of the model, I randomly selected background color of the texts for nine chosen light colors, as ‘White’, ‘Light Blue’, ‘Light Pink’, ‘Light Yellow’, ‘Light Green’, ‘Light Orange’, ‘Light Purple’, ‘Light Gray’ and ‘Light Brown’.  
@@ -34,12 +37,15 @@ To seamlessly integrate with the subsequent recognition model, this is a Python-
 
 **Image Processing**  
 Firstly, this is a highly effective component in improving model performance. Before adding the image processing module, the model's average accuracy was around 20%. After incorporating image processing, the accuracy of the model started to increase to over 80%. Image Processing includes three functions: 1) image grayscale, 2) splitting an image with multi-text-line into multiple images with single-text-line, 3) and text centering.  
-1. Image Grayscale: To enhance the feature extraction during network training and for subsequent steps, splitting an image with multi-text-line into multiple images with single-text-line, we have applied grayscale to both the train data for training model and the data to be recognized to trained model. The following images are the examples of grayscale.  
+1. Image Grayscale: To enhance the feature extraction during network training and for subsequent steps, splitting an image with multi-text-line into multiple images with single-text-line, we have applied grayscale to both the train data for training model and the data to be recognized to trained model. The following images are the examples of grayscale.
+
+
 ![image](https://github.com/Venyus/OCR/assets/118938648/c7bcb691-2063-439b-ba64-680794643982)  
-To obtain a clear and information-preserved grayscale image, we first deactivate the three channels of the image's RGB, preserving a single channel. Then we construct an ‘Gray Pixel Values and Image Rendering Mapping’, visualized as below.  
+To obtain a clear and information-preserved grayscale image, we first deactivate the three channels of the image's RGB, preserving a single channel. Then we construct an ‘Gray Pixel Values and Image Rendering Mapping’, visualized as below.
+<p align="center">
 ![image](https://github.com/Venyus/OCR/assets/118938648/6776d9c9-61e3-4af7-858f-2628c92d2220)  
 After multiple testing, the pixel around 130 was found to be the most suitable as the grayscale threshold. This means that pixel value below the threshold is to be converted to 0, and value above the threshold is to be converted to 255 during the grayscale conversion.  
-2. Splitting the multi-text-line image and text centering: No matter during the model training process or recognizing texts from images, the presence of multiline texts of input images tends to increase the complexity of the recognition task, leading to a significant decrease in accuracy. To address this, both during model training and subsequent image recognition, preprocessing steps are implemented to split images in advance. This is done to ensure an enhanced performance of the model.  
+3. Splitting the multi-text-line image and text centering: No matter during the model training process or recognizing texts from images, the presence of multiline texts of input images tends to increase the complexity of the recognition task, leading to a significant decrease in accuracy. To address this, both during model training and subsequent image recognition, preprocessing steps are implemented to split images in advance. This is done to ensure an enhanced performance of the model.  
 Following the previous step, the image underwent grayscale processing, resulting in pixel values representing with only two distinct: 0 and 255. Here, 0 indicates the area containing texts, while 255 represents the background region. Based on the pixel values, we can perform splitting the multi-text-line image and text centering as illustrated in the following.  
 ![image](https://github.com/Venyus/OCR/assets/118938648/2d472110-b9fb-4f6a-9f74-91ce88b712b5)  
 In simple terms, we identify entire rows or columns with pixel values of 255 as split boundaries. Consequently, multiple lines of content are transformed into individual lines.  
