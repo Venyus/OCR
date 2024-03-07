@@ -50,7 +50,7 @@ class PytorchOcr():
         return txt
 
 if __name__ == '__main__':
-    model_path = os.path.join(os.path.abspath('crnn_saved_models'), 'CRNN-CAPSTONE_27_973.pth')
+    model_path = os.path.join(os.path.abspath('crnn_saved_models'), 'CRNN-CAPSTONE_51_980.pth')
     recognizer = PytorchOcr(model_path) # cost 4 seconds
     img_name = os.path.join(os.path.abspath('data_set'), 'test_images', 'splited_image_11.jpg')
     img = cv2.imread(img_name)
