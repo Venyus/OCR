@@ -1,5 +1,5 @@
 # PDF Converter
-**A real-time OCR model tailored for printed texts(those in PDF files) based on CRNN**
+**A real-time OCR model tailored for printed texts(those in PDF files) based on CRNN**  
 Text extraction from PDFs has distinct characteristics compared to general OCR tasks:  
 1.Compared to real-world images, the pixel complexity is not high when recognizing text in PDFs.  
 2.The content to be recognized consists entirely of printed fonts, making it easier to build targeted training samples.  
