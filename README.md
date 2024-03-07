@@ -14,3 +14,4 @@ After a study of relevant theoretical methods, the task of the PDF converter is 
 4. Recognition model. 
 Here is the whole picture of the design of PDF Converter: 
 
+![Uploading image.png…]()
