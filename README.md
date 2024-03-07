@@ -94,60 +94,7 @@ And here is the summary of the CRNN network:
 </p> 
   
 **Code Files Association Guide**  
-CAPSTONE  
-|  
-|--crnn_save_models  
-|||||  
-|||||--CRNN-CAPSTONE_51_980.pth    # newest model  
-|  
-|--data_set  
-|||||  
-|||||--images  # used to save the self-generated data  
-|||||	  
-|||||--labesl  # the corresponding label of each image in 'images' folder  
-|||||   
-|||||--test_images  # some samples for checking my codes  
-|||||  
-|||||--test.txt  # used to record the image path to its label of test data set  
-|||||  
-|	  |--train.txt  # used to record the image path to its label of train data set  
-|  	|  
-|	  |--train_test_data.py  #  used to spilt the data into train set(80%) and test set(20%), to generate the test.txt and train.txt  
-|  
-|--debug files # to save the wrongly predict data via training process  
-|	  
-|--expr  # to save some self-designed test for my codes  
-|  
-|--log  # to save the some details of training process	  
-|  
-|--tools  
-|  	|  
-|	  |--alphabet.pkl  
-|	  |  
-|	  |--config.py  #  to intialize some parameters of my code  
-|	  |  
-|	  |--crnn.py  #  the CRNN network, based on pytorch  
-|	  |  
-|	  |--get_fonts.py  
-|	  |  
-|	  |--image_processing.py  #  grayscale, spilt multi-line-text image into one-line-text images and text centering  
-|	  |  
-|	  |--summary_crnn.py  #  to generate the parameters in CRNN network  
-|	  |  
-|	  |--trans.py  
-|	  |  
-|	  |--trans_utils.py  
-|	  |  
-|	  |--utils.py   
-|  
-|--main.py  #  to detect textx on the input image  
-|  
-|--raw_data_generation_pro.py  #  to generate my raw data  
-|  
-|--summary_crnn.png  #  parameters in CRNN network  
-|  
-|--train.py  #  the codes used to train the CRNN  
-|  
-|--ui.py  #  the UI with the prediction module, the PDF converter, the final output of my part.   
-
+<p align="center">
+    <img width="601" alt="image" src="https://github.com/Venyus/OCR/assets/118938648/64479532-59c2-4f75-add6-50c2af53995b">
+</p> 
 
