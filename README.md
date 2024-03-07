@@ -6,7 +6,7 @@ Text extraction from PDFs has distinct characteristics compared to general OCR t
 2. The content to be recognized consists entirely of printed fonts, making it easier to build targeted training samples.
 3. To enhance text information accuracy, not all text contents need to be detected.
 
-Therefore, by analyzing the above characteristics, our goal is to establish an OCR-based converter that is more focused on the distinctive features of PDF recognition and possesses higher accuracy.
+Therefore, by analyzing the above characteristics, my goal is to establish an OCR-based converter that is more focused on the distinctive features of PDF recognition and possesses higher accuracy.
 After a study of relevant theoretical methods, the task of the PDF converter is divided into four mini tasks, as: 
 1. Targeted training samples generation. 
 2. Implementation of a filtering and recognition mechanism for PDFs. 
