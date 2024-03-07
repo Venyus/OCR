@@ -1,4 +1,4 @@
-# OCR-PDF Converter
+# PDF Converter
 **A real-time OCR model tailored for printed texts(those in PDF files) based on CRNN**
 
 Text extraction from PDFs has distinct characteristics compared to general OCR tasks:
